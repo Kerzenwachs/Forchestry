@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tntChackalingo.Controller">
+  <tabs>
+    <Tab fx:id="tab1" text="Chuck a Luck">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="tf_bet" alignment="CENTER" layoutX="224.0" layoutY="102.0" prefHeight="40.0" prefWidth="149.0" promptText="Bet" text="1" />
+                  <Label fx:id="l_credits" layoutX="105.0" layoutY="7.0" prefHeight="39.0" prefWidth="481.0" text="1000">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="tf_dice2" layoutX="284.0" layoutY="142.0" text="0">
+                     <font>
+                        <Font size="60.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="tf_dice1" layoutX="234.0" layoutY="142.0" text="0">
+                     <font>
+                        <Font size="60.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="tf_dice3" layoutX="334.0" layoutY="142.0" text="0">
+                     <font>
+                        <Font size="60.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="b_roll" layoutX="71.0" layoutY="153.0" mnemonicParsing="false" onAction="#b_onRoll" text="Roll">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="l_win" alignment="CENTER" layoutX="427.0" layoutY="166.0" prefHeight="39.0" prefWidth="102.0" text="Win" textAlignment="CENTER">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TextArea editable="false" layoutX="33.0" layoutY="243.0" prefHeight="105.0" prefWidth="168.0" text="Pay Table&#10;&#10;1 Right guess    = Credits x2&#10;2 Right guesses = Credits x3&#10;3 Right guesses = Credits x4" />
+                  <Label layoutX="33.0" layoutY="14.0" text="Credits =">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="iv_dice" fitHeight="50.0" fitWidth="50.0" layoutX="276.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="b_diceButton" layoutX="276.0" layoutY="243.0" mnemonicParsing="false" onAction="#b_onDiceButton" opacity="0.1" prefHeight="50.0" prefWidth="50.0" />
+                  <Button fx:id="b_betSub1" layoutX="184.0" layoutY="102.0" mnemonicParsing="false" onAction="#b_onBetSub1" prefHeight="40.0" prefWidth="40.0" text="-">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="b_betAdd1" layoutX="373.0" layoutY="102.0" mnemonicParsing="false" onAction="#b_onBetAdd1" prefHeight="40.0" prefWidth="40.0" text="+">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="b_betAdd2" layoutX="413.0" layoutY="102.0" mnemonicParsing="false" onAction="#b_onBetAdd2" prefHeight="40.0" prefWidth="40.0" text="++">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="b_betSub2" layoutX="144.0" layoutY="102.0" mnemonicParsing="false" onAction="#b_onBetSub2" prefHeight="40.0" prefWidth="40.0" text="--">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="b_maxBet" layoutX="353.0" layoutY="62.0" mnemonicParsing="false" onAction="#b_onMaxBet" prefHeight="40.0" prefWidth="100.0" text="MAX BET">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="b_clear" layoutX="144.0" layoutY="62.0" mnemonicParsing="false" onAction="#b_onClear" prefHeight="40.0" prefWidth="100.0" text="Clear">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="CENTER" layoutX="244.0" layoutY="62.0" prefHeight="40.0" prefWidth="109.0" text="Bet">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tf_codes" layoutX="327.0" layoutY="332.0" prefHeight="25.0" prefWidth="209.0" promptText="Codes" />
+                  <Button fx:id="b_send" layoutX="536.0" layoutY="332.0" mnemonicParsing="false" onAction="#b_onSend" text="Send" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab fx:id="tab2" text="Credits" />
+  </tabs>
+</TabPane>
